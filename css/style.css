@@ -1,0 +1,146 @@
+@charset "UTF-8";
+/* Rubén Torres */
+
+/*** IMPORTACIONES ***/
+@import url('fuentes.css');
+@import url('colores.css');
+
+/*** ASIGNACIONES GLOBALES ***/
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Arial';
+}
+
+html{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+body{
+    font-size: 16px;
+}
+
+h1{
+    /* font-size: 60px; */
+    font-size: 3.75em;
+    text-align: center;
+}
+
+/*** MAIN ***/
+main > section{
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main > section:first-child{
+    background-color: var(--principal);
+    color: white;
+}
+
+main > section:nth-child(2n){
+    background-color: var(--contraste1);
+    flex-direction: row-reverse;
+}
+
+main > section:last-child{
+    background-color: var(--secundario);
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: white;
+}
+
+/** BOTONES MOVER **/
+.botonMover{
+    /* 
+        Quiero que siempre tengan el 
+        mismo tamaño, por eso lo dejo en px
+    */
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    opacity: 10%;
+    transition: all 500ms ease;
+}
+
+.botonMover:hover{
+    opacity: 100%;
+    transition: all 500ms ease;
+}
+
+.botonMover > i{
+    /* font-size: 25px; */
+    font-size: 1.5625em;
+}
+
+.moverAbajo{
+    bottom: 20px;
+}
+
+.moverArriba{
+    top: 20px;
+}
+
+/* Corrección de icono en moverArriba */
+.moverArriba > i{
+    margin-top: -5px;
+}
+
+/** IMAGEN **/
+.imagen{
+    /* width: 300px; */
+    width: 30%;
+    /* height: 370px; */
+    height: 23.125em;
+    border: 3px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*** FOOTER ***/
+footer{
+    color: white;
+    background-color: rgb(51, 51, 51);
+}
+
+/** FOOTER 1 **/
+footer > section:first-child > div{
+    width: 300px;
+    margin: 0px auto;
+    padding: 40px 0;
+}
+
+footer > section:first-child > div > img{
+    width: 100%;
+}
+
+/** FOOTER 2 **/
+footer > section:last-child{
+    background-color: rgb(37, 37, 37);
+}
+
+/*** RESPONSIVE ***/
+@media screen and (max-width: 900px){
+
+    main > section{
+        flex-direction: column!important;
+        justify-content: space-evenly;
+    }
+
+    .imagen{
+        width: 50%;
+    }
+
+}

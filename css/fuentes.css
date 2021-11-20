@@ -1,0 +1,11 @@
+/***** FUENTES *****/
+/*** LOCALES ***/
+@font-face {
+    font-family: 'Co Text Regular';
+    src: url(../recursos/fuentes/cotextregular.ttf);
+}
+
+@font-face {
+    font-family: 'Omnes Extra Light';
+    src: url(../recursos/fuentes/omnesextralight.otf);
+}
