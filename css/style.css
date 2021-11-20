@@ -34,7 +34,7 @@ main > section{
     height: 100vh;
     position: relative;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -51,8 +51,25 @@ main > section:nth-child(2n){
 main > section:last-child{
     background-color: var(--secundario);
     flex-direction: column;
-    justify-content: space-evenly;
     color: white;
+}
+
+/** TÍTULO **/
+.titulo{
+    /* width: 200px; */
+    width: 20%;
+}
+
+/** IMAGEN **/
+.imagen{
+    /* width: 300px; */
+    width: 30%;
+    /* height: 370px; */
+    height: 23.125em;
+    border: 3px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /** BOTONES MOVER **/
@@ -97,18 +114,6 @@ main > section:last-child{
     margin-top: -5px;
 }
 
-/** IMAGEN **/
-.imagen{
-    /* width: 300px; */
-    width: 30%;
-    /* height: 370px; */
-    height: 23.125em;
-    border: 3px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 /*** FOOTER ***/
 footer{
     color: white;
@@ -138,11 +143,20 @@ footer > section:last-child{
 
     main > section{
         flex-direction: column!important;
-        justify-content: space-evenly;
+    }
+
+    .titulo{
+        width: 90%;
     }
 
     .imagen{
         width: 50%;
     }
 
+}
+
+@media screen and (max-width: 600px){
+    footer > section:first-child > div{
+        width: 60%;
+    }
 }
