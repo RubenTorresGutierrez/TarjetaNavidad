@@ -14,10 +14,10 @@
     font-family: 'Arial';
 }
 
-html{
+/* html{
     width: 1000px;
     margin: 0 auto;
-}
+} */
 
 body{
     font-size: 16px;
@@ -117,9 +117,11 @@ footer{
 
 /** FOOTER 1 **/
 footer > section:first-child > div{
-    width: 300px;
-    margin: 0px auto;
-    padding: 40px 0;
+    /* width: 230px; */
+    width: 23%;
+    margin: 0 auto;
+    /* padding: 40px 0; */
+    padding: 2.5em 0;
 }
 
 footer > section:first-child > div > img{
