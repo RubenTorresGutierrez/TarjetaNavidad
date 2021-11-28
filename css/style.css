@@ -20,57 +20,76 @@
 } */
 
 body{
-    font-size: 16px;
+    font-size: 25px;
+}
+
+h1, h2{
+    font-family: 'Co Text Regular';
 }
 
 h1{
     /* font-size: 60px; */
-    font-size: 3.75em;
-    text-align: center;
-    font-family: 'Co Text Regular';
+    font-size: 2.4em;
 }
 
 /*** MAIN ***/
 main > section{
     height: 100vh;
     position: relative;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    /* padding: 0 20px; */
+    padding: 0 2%;
 }
 
-main > section:first-child{
+/*** SECTION ***/
+main > section > div{
+    position: relative;
+    float: left;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+/** PARES **/
+main > section:nth-child(2n) > div{
+    float: right;
+    text-align: right;
+}
+
+/** COLORES **/
+.rojo{
     background-color: var(--principal);
     color: white;
 }
 
-main > section:nth-child(2n){
+.blanco{
     background-color: var(--contraste1);
-    flex-direction: row-reverse;
 }
 
-main > section:last-child{
+.azul{
     background-color: var(--secundario);
-    flex-direction: column;
     color: white;
 }
 
 /** TÍTULO **/
 .titulo{
-    /* width: 200px; */
-    width: 20%;
+    /* width: 400px; */
+    width: 41.666666667%; /* Respecto a 960px */
+    /* padding: 40px; */
+    padding: 4.166666667%;
 }
 
 /** IMAGEN **/
 .imagen{
-    /* width: 300px; */
-    width: 30%;
+    /* width: 480px; */
+    width: 50%; /* Respecto a 960px */
     /* height: 370px; */
-    height: 23.125em;
-    border: 3px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* height: 14.8em; */
+}
+
+.imagen > img{
+    max-width: 100%;
+    max-height: 90vh;
 }
 
 /** BOTONES MOVER **/
@@ -82,12 +101,15 @@ main > section:last-child{
     width: 60px;
     height: 60px;
     position: absolute;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%);
     border-radius: 30px;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
+    border: none;
+    cursor: pointer;
     opacity: 10%;
     transition: all 500ms ease;
 }
@@ -98,8 +120,8 @@ main > section:last-child{
 }
 
 .botonMover > i{
-    /* font-size: 25px; */
-    font-size: 1.5625em;
+    font-size: 25px;
+    /* font-size: 1em; */
 }
 
 .moverAbajo{
@@ -127,7 +149,7 @@ footer > section:first-child > div{
     width: 23%;
     margin: 0 auto;
     /* padding: 40px 0; */
-    padding: 2.5em 0;
+    padding: 1.6em 0;
 }
 
 footer > section:first-child > div > img{
@@ -142,16 +164,17 @@ footer > section:last-child{
 /*** RESPONSIVE ***/
 @media screen and (max-width: 900px){
 
-    main > section{
-        flex-direction: column!important;
-    }
-
     .titulo{
         width: 90%;
     }
 
     .imagen{
         width: 50%;
+    }
+
+    main > section > div,
+    main > section:nth-child(2n) > div{
+        float: none;
     }
 
 }
@@ -161,3 +184,12 @@ footer > section:last-child{
         width: 60%;
     }
 }
+
+/*
+    ATRIBUCIONES
+    imagen 2: <a href="https://www.freepik.es/vectores/navidad">Vector de Navidad creado por vectorjuice - www.freepik.es</a>
+    imagen 3: <a href='https://www.freepik.es/vectores/personas'>Vector de Personas creado por pikisuperstar - www.freepik.es</a>
+    imagen 4: <a href='https://www.freepik.es/vectores/lazo'>Vector de Lazo creado por pch.vector - www.freepik.es</a>
+    imagen 5: <a href='https://www.freepik.es/vectores/comida'>Vector de Comida creado por pch.vector - www.freepik.es</a>
+    mapa: <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3198.086898441672!2d-4.445595084712354!3d36.72047417996503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd72f774add9b019%3A0x5ad6377d9a5e61cc!2sC.%20Virgen%20de%20las%20Flores%2C%2023%2C%2029007%20M%C3%A1laga!5e0!3m2!1ses!2ses!4v1637597561552!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+*/
