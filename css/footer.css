@@ -1,0 +1,162 @@
+@charset "UTF-8";
+/* Rubén Torres */
+
+/*** IMPORTACIONES ***/
+@import url('colores.css');
+
+/*** FOOTER ***/
+footer{
+    /* font-size: 20px; */
+    font-size: 0.8em;
+    background-color: rgb(51, 51, 51);
+}
+
+/** FOOTER 1 **/
+footer > section:first-child{
+    /* padding: 20px 60px; */
+    padding: 2% 6%; /* respecto a 1000px */
+    overflow: hidden;
+}
+
+footer > section:first-child > div{
+    float: left;
+    /* width: 400px; */
+    width: 45.454545455%; /* respecto a 880px */
+    /* padding: 0px 20px; */
+    padding: 0 2.272727273%; /* respecto a 880px */
+    text-align: center;
+    font-weight: bold;
+}
+
+/* ICONOS */
+footer > section:first-child > div > a{
+    color: white;
+    /* margin: 0 10px; */
+    margin: 0 2.5%; /* respecto a 400px */
+}
+
+footer > section:first-child > div > a > .fa,
+a:hover > .fa{
+    transition: all 500ms ease;
+}
+
+footer > section:first-child a:hover > .fa{
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
+}
+
+footer > section:first-child a:hover > .fa-facebook{
+    color: #4267B2;
+}
+
+footer > section:first-child a:hover > .fa-twitter{
+    color: #1DA1F2;
+}
+
+footer > section:first-child a:hover > .fa-youtube-play{
+    color: #FF0000;
+}
+
+footer > section:first-child a:hover > .fa-linkedin{
+    color: #0077b5;
+}
+
+footer > section:first-child a:hover > .fa-instagram{
+    background: -webkit-linear-gradient(55deg, rgba(255,220,128,1) 0%, rgba(245,96,64,1) 36%, rgba(193,53,132,1) 61%, rgba(64,93,230,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/** FOOTER 2 **/
+footer > section:nth-of-type(2){
+    /* padding: 40px 60px; */
+    padding: 4% 6%; /* respecto a 1000px */
+    /* font-size: 16px; */
+    font-size: 0.8em; /* respecto a 20px */
+    overflow: hidden;
+}
+
+footer > section:nth-of-type(2) > div{
+    /* width: 200px; */
+    width: 22.727272727%; /* respecto a 880px */
+    /* margin: 0px 10px; */
+    margin: 0 1.136363636%; /* respecto a 880px */
+    float: left;
+}
+
+/* HR */
+footer > section:nth-of-type(2) > div > hr{
+    /* width: 100px; */
+    width: 50%; /* respecto a 200px */
+    /* margin: 5px 0px; */
+    margin: 2.5% 0px; /* respecto a 200px */
+    border: 1px solid var(--secundario);
+}
+
+/* LI */
+footer > section:nth-of-type(2) > div li{
+    /* margin-top: 10px; */
+    margin-top: 0.5em; /* respecto a 20px */
+}
+
+/* LOGO */
+footer > section:nth-of-type(2) > div > img{
+    width: 100%;
+}
+
+/* ICONOS */
+footer > section:nth-of-type(2) > div i{
+    /* margin-right: 5px; */
+    margin-right: 2.5%; /* respecto a 200px */
+}
+
+/* ENLACES */
+footer > section:nth-of-type(2) > div a{
+    color: var(--secundario);
+    font-weight: bold;
+}
+
+footer > section:nth-of-type(2) > div a:hover{
+    color: white;
+}
+
+
+/** FOOTER 3 **/
+footer > section:last-child{
+    background-color: rgb(37, 37, 37);
+    /* padding: 10px 0px; */
+    padding: 0.5em 0; /* respecto a 20px */
+}
+
+footer > section:last-child > p{
+    /* font-size: 18px; */
+    font-size: 0.9em; /* respecto a 20px */
+    text-align: center;
+    color: rgb(196, 196, 196);
+}
+
+footer > section:last-child > p > a{
+    font-weight: bold;
+    color: white;
+}
+
+
+@media screen and (max-width: 800px){
+
+    footer > section:first-child > div,
+    footer > section:nth-of-type(2) > div{
+        float: none;
+    }
+
+    footer > section:first-child > div{
+        /* width: 840px; */
+        width: 95.454545455%; /* respecto a 880px */
+        margin: 20px 0;
+    }
+
+    footer > section:nth-of-type(2) > div{
+        width: 100%;
+        margin: 30px 0;
+    }
+
+}
