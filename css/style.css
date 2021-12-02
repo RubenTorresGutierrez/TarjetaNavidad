@@ -87,7 +87,7 @@ main > section:nth-child(2n) > div{
     padding: 4.166666667%;
 }
 
-/** IMAGEN **/
+/** IMAGEN | VÍDEO **/
 .imagen{
     /* width: 480px; */
     width: 50%; /* Respecto a 960px */
@@ -95,7 +95,8 @@ main > section:nth-child(2n) > div{
     justify-content: center;
 }
 
-.imagen > img{
+.imagen > img,
+.imagen > video{
     max-width: 100%;
     max-height: 90vh;
 }
@@ -161,9 +162,12 @@ main > section:nth-child(2n) > div{
 
 /*
     ATRIBUCIONES
-    imagen 2: <a href="https://www.freepik.es/vectores/navidad">Vector de Navidad creado por vectorjuice - www.freepik.es</a>
-    imagen 3: <a href='https://www.freepik.es/vectores/personas'>Vector de Personas creado por pikisuperstar - www.freepik.es</a>
-    imagen 4: <a href='https://www.freepik.es/vectores/lazo'>Vector de Lazo creado por pch.vector - www.freepik.es</a>
-    imagen 5: <a href='https://www.freepik.es/vectores/comida'>Vector de Comida creado por pch.vector - www.freepik.es</a>
-    mapa: <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3198.086898441672!2d-4.445595084712354!3d36.72047417996503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd72f774add9b019%3A0x5ad6377d9a5e61cc!2sC.%20Virgen%20de%20las%20Flores%2C%2023%2C%2029007%20M%C3%A1laga!5e0!3m2!1ses!2ses!4v1637597561552!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    navidad: <a href="https://www.freepik.es/vectores/navidad">Vector de Navidad creado por vectorjuice - www.freepik.es</a>
+    imagen3: <a href='https://www.freepik.es/vectores/personas'>Vector de Personas creado por pikisuperstar - www.freepik.es</a>
+    regalar: <a href='https://www.freepik.es/vectores/lazo'>Vector de Lazo creado por pch.vector - www.freepik.es</a>
+    ayudar: <a href='https://www.freepik.es/vectores/comida'>Vector de Comida creado por pch.vector - www.freepik.es</a>
+    persona-ayudar: <a href='https://www.freepik.es/vectores/abstracto'>Vector de Abstracto creado por pch.vector - www.freepik.es</a>
+    decoraciones-ayudar: <a href='https://www.freepik.es/vectores/navidad'>Vector de Navidad creado por freepik - www.freepik.es</a>
+    estrellas-ayudar: <a href='https://www.freepik.es/vectores/estrellas'>Vector de Estrellas creado por freepik - www.freepik.es</a>
+    atreverte: <a href='https://www.freepik.es/vectores/nieve'>Vector de Nieve creado por pch.vector - www.freepik.es</a>
 */
