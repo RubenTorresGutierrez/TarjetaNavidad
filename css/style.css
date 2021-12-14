@@ -98,6 +98,20 @@ main > section:nth-child(2n){
     box-shadow: 0px 0px 20px black;
 }
 
+main > section:last-child > .imagen{
+    cursor: pointer;
+    transition: all 1000ms ease;
+}
+
+main > section:last-child > .imagen > img{
+    transition: all 500ms ease;
+}
+
+main > section:last-child > .imagen > img:hover{
+    transition: all 500ms ease;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+}
+
 
 /** BOTONES MOVER **/
 .botonMover{

@@ -9,23 +9,47 @@
 *   Ref JSDoc: https://jsdoc.app/
 */
 'use strict'
-window.onload = iniciar;
 
-function iniciar(){
+class App{
 
-    let botones = document.getElementsByClassName('botonMover');
-    //botones.setAttribute('onclick', 'desplazamiento()');
-    for (const boton of botones) {
-        boton.onclick = desplazamiento;
+    constructor(){
+	
+	window.onload = this.iniciar.bind(this);
+
+	//ATRIBUTOS
+	this.misterio = document.querySelector('main > section:last-child > .imagen');
+
     }
+
+    iniciar(){
+
+	//BOTONES
+	let botones = document.getElementsByClassName('botonMover');
+	for (const boton of botones) {
+	    boton.onclick = this.desplazamiento;
+	}
+
+	//Efecto imagen
+	window.setInterval(this.animarImagen.bind(this), 1000);
+
+    }
+
+    desplazamiento(){
     
+	let audio = document.createElement('audio');
+	audio.setAttribute('src', 'recursos/audio/desplazamiento.wav');
+	audio.play();
+
+    }
+
+    animarImagen(){
+
+	if(this.misterio.style.width == '50%')
+	    this.misterio.style.width = '55%';
+	else this.misterio.style.width = '50%';
+
+    }
 
 }
 
-function desplazamiento(){
-    
-    let audio = document.createElement('audio');
-    audio.setAttribute('src', 'recursos/audio/desplazamiento.wav');
-    audio.play();
-
-}
+let app = new App();
