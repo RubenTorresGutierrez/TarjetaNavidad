@@ -34,6 +34,11 @@ h1{
 }
 
 /*** MAIN ***/
+main{
+    height: 100vh;
+    overflow: hidden;
+}
+
 main > section{
     height: 100vh;
     position: relative;
@@ -72,6 +77,18 @@ main > section:nth-child(2n){
     background-color: var(--analogo2);
 }
 
+/* TRANSICIÓN */
+main > section > div{
+    opacity: 0%;
+    transform: translateY(100px);
+    transition: all 0.5s 0.5s;
+}
+
+.transicion{
+    opacity: 100%;
+    transform: translateY(0);
+}
+
 /** TÍTULO **/
 .titulo{
     /* width: 400px; */
@@ -99,7 +116,6 @@ main > section:nth-child(2n){
 }
 
 main > section:last-child > .imagen{
-    cursor: pointer;
     transition: all 1000ms ease;
 }
 
