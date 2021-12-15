@@ -22,7 +22,8 @@ class App{
 	//Índice de en que section está
 	this.indice = 0;
 	//Botones de desplazamiento
-	this.botones = document.getElementsByClassName('botonMover');
+	this.botonesAbajo = document.getElementsByClassName('botonAbajo');
+	this.botonesArriba = document.getElementsByClassName('botonArriba');
 	//Imagen del misterio
 	this.misterio = document.querySelector('main > section:last-child > .imagen');
 
@@ -33,8 +34,12 @@ class App{
     iniciar(){
 
 	//BOTONES
-	for (const boton of this.botones) {
+	for (const boton of this.botonesAbajo) {
 	    boton.onclick = this.moverAbajo.bind(this);
+	}
+	
+	for (const boton of this.botonesArriba) {
+	    boton.onclick = this.moverArriba.bind(this);
 	}
 
 	//Aplicar la clase transicion a los elementos del primer section
