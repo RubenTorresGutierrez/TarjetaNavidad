@@ -26,7 +26,13 @@ class App{
 	this.botonesArriba = document.getElementsByClassName('botonArriba');
 	//Imagen del misterio
 	this.misterio = document.querySelector('main > section:last-child > .imagen');
-
+	
+	//Scroll
+	//Tiempo de espera entre scroll y scroll
+	this.tiempoEspera = 1000;
+	//Último scroll realizado
+	this.ultimoScroll = 0;
+	
 	window.onload = this.iniciar.bind(this);
 
     }
@@ -48,9 +54,24 @@ class App{
 
 	//Efecto con scroll
 	this.main.addEventListener('wheel', (e) => {
+	    
+	    //Obtener el tiempo actual en ms
+	    const tiempoActual = new Date().getTime();
+
+	    //Comprobar si ya ha pasado el tiempo de espera entre scroll y scroll
+	    if(tiempoActual - this.ultimoScroll < this.tiempoEspera){
+		e.preventDefault();
+		return;
+	    }
+
+	    //Comprobar si el scroll es negativo(abajo) o positivo(arriba)
 	    if(e.wheelDelta < 0)
 		this.moverAbajo();
 	    else this.moverArriba();
+
+	    //El último scroll pasa a ser el tiempo actual en ms
+	    this.ultimoScroll = tiempoActual;
+
 	})
 
 	//Efecto imagen
